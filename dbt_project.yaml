@@ -1,0 +1,71 @@
+name: string
+
+config-version: 3
+version: version
+
+profile: profilename
+
+model-paths: [directorypath]
+seed-paths: [directorypath]
+test-paths: [directorypath]
+analysis-paths: [directorypath]
+macro-paths: [directorypath]
+snapshot-paths: [directorypath]
+docs-paths: [directorypath]
+asset-paths: [directorypath]
+
+packages-install-path: directorypath
+
+clean-targets: [directorypath]
+
+query-comment: string
+
+require-dbt-version: version-range | [version-range]
+
+flags:
+  <global-configs>
+
+dbt-cloud:
+  project-id: project_id # Required
+  defer-env-id: environment_id # Optional
+
+quoting:
+  database: true | false
+  schema: true | false
+  identifier: true | false
+
+metrics:
+  <metric-configs>
+
+models:
+  <model-configs>
+
+seeds:
+  <seed-configs>
+
+semantic-models:
+  <semantic-model-configs>
+
+saved-queries:
+  <saved-queries-configs>
+
+snapshots:
+  <snapshot-configs>
+
+sources:
+  <source-configs>
+  
+tests:
+  <test-configs>
+
+vars:
+  <variables>
+
+on-run-start: sql-statement | [sql-statement]
+on-run-end: sql-statement | [sql-statement]
+
+dispatch:
+  - macro_namespace: packagename
+    search_order: [packagename]
+
+restrict-access: true | false
