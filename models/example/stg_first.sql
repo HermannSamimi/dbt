@@ -1,3 +1,4 @@
+USE warehouse HERMANNDBSCHEMA;
 with hermann as (SELECT
   *
 FROM
