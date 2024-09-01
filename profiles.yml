@@ -1,0 +1,14 @@
+# Define the Snowflake profile for dbt
+snowflakeonnection:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: dmostoa-uh34495
+      user: hermann
+      password: "@H09122501057h"
+      role: admin
+      database: hermanndb
+      warehouse: COMPUTE_WH
+      schema: HERMANNDBSCHEMA
+      threads: 1

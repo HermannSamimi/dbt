@@ -7,7 +7,7 @@ config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
 # Ensure that 'default' matches the profile name in your profiles.yml
-profile: 'default'
+profile: 'snowflakeonnection'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -36,8 +36,9 @@ clean-targets:         # Directories to be removed by `dbt clean`
 
 models:
   my_new_project:
-    # Applies to all files under models/example/
+    # Applies to all models in the project
+    +materialized: view
+    
+    # Specific override for models in the example folder
     example:
       +materialized: table
-    # Apply this materialization to all models
-    +materialized: view
