@@ -1,6 +1,6 @@
 name: string
 
-config-version: 3
+config-version: 2
 version: version
 
 profile: profilename
